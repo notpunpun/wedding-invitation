@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <meta name="theme-color" content="#BC8887" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Undangan Pernikahan [Nama CPW] & [Nama CPP]</title>
+    <title>Undangan Pernikahan Nur Izzati & Danial Solehin</title>
 
-    <meta property="og:title" content="Undangan Pernikahan Ti & Niel - Hari, 05 Sep 2026">
-    <meta property="og:description" content="Undangan Pernikahan Ti & Niel  - Sabtu, 05 Sep 2026 di Wankay Suites, Gong Badak">
+    <meta property="og:title" content="Undangan Pernikahan Ti & Niel - Sabtu, 05 Sep 2026">
+    <meta property="og:description" content="Undangan Pernikahan Ti & Niel - Sabtu, 05 Sep 2026 di Wankay Suites, Gong Badak">
     <meta property="og:locale" content="id_ID" />
     <meta property="og:image" content="https://simple-wedding-invitation.dae.ng/image/samantha-gades-x40Q9jrEVT0-unsplash.jpg">
     <meta property="og:url" content="http://simple-wedding-invitation.dae.ng/index.html">
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Bulma Version 0.8.x-->
+
+    <!-- Bulma -->
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/bulma-tooltip@0.1.5/dist/bulma-tooltip.min.css" />
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="css/menikah.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.countdown.css" />
-    <script
-      src="https://kit.fontawesome.com/2828f7885a.js"
-      integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG"
-      crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2828f7885a.js" integrity="sha384-WAsFbnLEQcpCk8lM1UTWesAf5rGTCvb2Y+8LvyjAAcxK1c3s5c0L+SYOgxvc6PWG" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/jquery.coundown.js"></script>
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
     <link rel="icon" type="image/png" href="image/favicon.png" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23064379-20"></script>
-    <!-- Begin Script for Countdown -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-23064379-20');
     </script>
-    <!-- Begin Script for Countdown -->
 
     <!-- Github Button -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
@@ -48,67 +54,51 @@
         <img src="image/favicon.png" alt="Flower" />
       </div>
     </div>
-    <!-- End Preloader-->
+    <!-- End Preloader -->
+
     <!-- Begin Header -->
     <div class="header-wrapper" id="home">
       <!-- Begin Hero -->
       <section class="hero is-large">
+
         <!-- Begin Mobile Nav -->
-        <nav class="navbar is-transparent is-hidden-desktop">
-          <!-- Begin Burger Menu -->
+        <nav class="navbar is-transparent is-hidden-desktop" id="mobile-navbar">
           <div class="navbar-brand is-fixed-top">
-            <div class="navbar-burger burger" data-target="mobile-nav">
+            <div class="navbar-burger burger" id="burger-btn">
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
-          <!-- End Burger Menu -->
           <div id="mobile-nav" class="navbar-menu">
             <div class="navbar-end">
-              <div class="navbar-item">
-                <a class="navbar-item" href="#Waktu">
-                  Waktu
-                </a>
-              </div>
-              <div class="navbar-item">
-                <a class="navbar-item" href="#lokasi">
-                  Lokasi
-                </a>
-              </div>
-              
-              <div class="navbar-item">
-                <a class="navbar-item" href="#tentang-pasangan">
-                  About
-                </a>
-              </div>
-              <div class="navbar-item">
-                <a class="navbar-item" href="#rsvp">
-                  RSVP
-                </a>
-              </div>
+              <a class="navbar-item" href="#home">Home</a>
+              <a class="navbar-item" href="#Waktu">Waktu</a>
+              <a class="navbar-item" href="#lokasi">Lokasi</a>
+              <a class="navbar-item" href="#tentang-pasangan">About</a>
+              <a class="navbar-item" href="#rsvp">RSVP</a>
             </div>
           </div>
         </nav>
         <!-- End Mobile Nav -->
-        <!-- Begin Hero Content-->
+
+        <!-- Begin Hero Content -->
         <div class="hero-body">
           <div class="container has-text-centered">
             <h1 class="subtitle">Undangan Pernikahan</h1>
-            <h2 class="title">Daniel Solehin & Nur Izzati</h2>
+            <h2 class="title">Nur Izzati & Danial Solehin</h2>
             <h4 class="subtitle tempatwaktu">
-              
-                Sabtu, 05 September 2026 
-                </br>
-                Wankay Suites, Gong Badak
-                </br>
-                Terengganu
-              
+              Sabtu, 05 September 2026
+              <br>
+              Wankay Suites, Gong Badak
+              <br>
+              Terengganu
             </h4>
           </div>
-          <!-- Start Countdown -->       
+
+          <!-- Start Countdown -->
           <div>
-            <ul id="hitungmundur" >
+            <ul id="hitungmundur">
               <li><span class="days">00</span><p class="days_text">Hari</p></li>
               <li class="separator">:</li>
               <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
@@ -117,58 +107,42 @@
               <li class="separator">:</li>
               <li><span class="seconds">00</span><p class="seconds_text">Detik</p></li>
             </ul>
-            <div class="spasi">
-            </div>
+            <div class="spasi"></div>
             <script type="text/javascript">
-              var now = new Date();
-              var day = now.getDate();
-              var month = now.getMonth() + 1;
-              var year = now.getFullYear() + 1;
-          
-              var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
               var harih = '09/05/2026 17:00:00';
-
               $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
-                offset: +7, // TODO Your Timezone Offset
+                date: harih,
+                offset: +7,
                 day: 'Hari',
                 days: 'Hari'
               }, function () {
                 alert('Done!');
               });
-            </script>  
+            </script>
           </div>
           <!-- End Countdown -->
+
         </div>
-        <!-- End Hero Content-->
-        <!-- Begin Hero Menu -->
-        <div class="hero-foot ">
+        <!-- End Hero Content -->
+
+        <!-- Begin Hero Menu (Desktop) -->
+        <div class="hero-foot">
           <div class="hero-foot--wrapper">
             <div class="columns">
               <div class="column is-12 hero-menu-desktop has-text-centered">
                 <ul>
-                  <li class="is-active">
-                    <a href="#home">Home</a>
-                  </li>
-                  <li>
-                    <a href="#Waktu">Waktu</a>
-                  </li>
-                  <li>
-                    <a href="#lokasi">Lokasi</a>
-                  </li>
-                  <li>
-                    <a href="#tentang-pasangan">Tentang CPW & CPP</a>
-                  </li>
-
-                  <li>
-                    <a href="#rsvp">RSVP</a>
-                  </li>
+                  <li class="is-active"><a href="#home">Home</a></li>
+                  <li><a href="#Waktu">Waktu</a></li>
+                  <li><a href="#lokasi">Lokasi</a></li>
+                  <li><a href="#tentang-pasangan">Tentang CPW & CPP</a></li>
+                  <li><a href="#rsvp">RSVP</a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <!-- End Hero Menu -->
+
       </section>
       <!-- End Hero -->
     </div>
@@ -176,33 +150,25 @@
 
     <!-- Begin Main Content -->
     <div class="main-content">
-    <!-- Begin regular-section-->
-     <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
-        
+
+      <!-- Begin regular-section -->
+      <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
         <div data-aos="fade-up" data-aos-easing="linear">
           <img src="image/bismillah.png" class="bismillah has-text-centered" alt="Bismillahirrahmaanirrahiim">
         </div>
-
         <p class="bodytext" data-aos="fade-up" data-aos-easing="linear">
           Assalamu'alaikum Warahmatullahi Wabarakatuh.
           <br />
-          Dengan memohon rahmat dan ridha Allah swt, 
+          Dengan memohon rahmat dan ridha Allah swt,
           <br />
           kami bermaksud mengundang korang pada acara pernikahan kami
         </p>
-
         <span class="space40px"></span>
         <span class="space40px"></span>
-
         <div data-aos="fade-up" data-aos-easing="linear">
-          <div class="nama-lengkap" >
-            Nur Izzati
-          </div>
+          <div class="nama-lengkap">Nur Izzati</div>
           <div class="ampersand">&</div>
-          <div class="nama-lengkap">
-          Danial Solehin
-          </div>
-           
+          <div class="nama-lengkap">Danial Solehin</div>
         </div>
         <span class="space40px"></span>
         <div data-aos="fade-up" data-aos-easing="linear">
@@ -211,71 +177,51 @@
         <span class="space40px"></span>
         <span class="space40px"></span>
       </section>
-      <!-- End regular-section-->    
-      
+      <!-- End regular-section -->
+
       <!-- Begin Waktu Section -->
       <section class="section-dark" id="Waktu">
         <div class="container">
-
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
             <h1 class="title has-text-centered section-title">Waktu</h1>
           </div>
           <div class="columns is-multiline" data-aos="fade-up" data-aos-easing="linear">
-            <div
-              class="column is-4 has-vertically-aligned-content">
-            
-              <p class="is-larger has-text-centered">
-                  <div class="waktu tanggal-hari has-text-centered">Sabtu</div> 
-                  <div class="waktu tanggal-angka has-text-centered">05</div>
-                  <div class="waktu tanggal-bulan has-text-centered">Spet 2026</div>
-              </p>
-            
+            <div class="column is-4 has-vertically-aligned-content">
+              <div class="waktu tanggal-hari has-text-centered">Sabtu</div>
+              <div class="waktu tanggal-angka has-text-centered">05</div>
+              <div class="waktu tanggal-bulan has-text-centered">Sept 2026</div>
             </div>
             <div class="column is-4 has-vertically-aligned-content">
-            
               <p class="waktu is-larger has-text-centered">
-                Akad Nikah:
-                <br>
-                <strong>TBC</strong>
+                Akad Nikah:<br><strong>TBC</strong>
               </p>
-            
             </div>
-
             <div class="column is-4 has-vertically-aligned-content">
-              
-              <h1 class="waktu is-larger has-text-centered">
-                Resepsi:
-                <br>
-                <strong>TBC</strong>
-              </h1>
-              
-              
+              <p class="waktu is-larger has-text-centered">
+                Resepsi:<br><strong>TBC</strong>
+              </p>
             </div>
-
           </div>
         </div>
         <div class="space40px"></div>
         <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-          <a href="https://calendar.google.com/event?action=TEMPLATE..." target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+          <a href="https://calendar.google.com/event?action=TEMPLATE..." target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" data-aos="zoom-in">
             <i class="far fa-calendar-plus"></i>
             &nbsp;&nbsp;Google Calendar
           </a>
         </div>
       </section>
-      <!-- End Waktu Content -->
+      <!-- End Waktu Section -->
 
       <!-- Begin Lokasi Section -->
-      <section class="section-darker" id="lokasi" >
+      <section class="section-darker" id="lokasi">
         <div class="container">
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
             <h1 class="title has-text-centered section-title">Lokasi</h1>
             <p class="tempat is-larger has-text-centered">
-              <strong>Wankay Suites</strong>
-              <br>
-              Jln Gong Badak, 21300.   
-              <br>
+              <strong>Wankay Suites</strong><br>
+              Jln Gong Badak, 21300.<br>
               Kuala Terengganu, Terengganu
-              <br>
             </p>
           </div>
           <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
@@ -290,124 +236,99 @@
           </div>
         </div>
       </section>
-      <!-- End Lokasi Content -->
+      <!-- End Lokasi Section -->
 
-      <!-- Begin Tentang [Calon Mempelai Wanita] and [Calon Mempelai [Pria] -->
+      <!-- Begin Tentang Pasangan -->
       <section class="section-light regular-section is-fullheight" id="tentang-pasangan">
         <div class="container">
-          <div class="columns is-multiline">  
-          <div class="column has-text-centered is-12 prolog">
-            <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear"> Tentang [Calon Mempelai Wanita] dan [Calon Mempelai [Pria]</h1>
-            
+          <div class="columns is-multiline">
+            <div class="column has-text-centered is-12 prolog">
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Tentang Nur Izzati dan Danial Solehin</h1>
 
-          
-          <!-- IMAGES -->  
-        <div class=" tile">
-          <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <article class="tile is-child foto1 notification foto1" data-aos="fade-up" data-aos-easing="linear">
-              <div class="content">
-                <p class="title-foto">Foto 1</p>
-                <p class="subtitle-foto">
-                  lorem <a href="https://google.com" target="_blank">ipsum</a>
-                </p>
+              <!-- IMAGES -->
+              <div class="tile">
+                <div class="tile is-ancestor">
+                  <div class="tile is-parent">
+                    <article class="tile is-child foto1 notification" data-aos="fade-up" data-aos-easing="linear">
+                      <div class="content">
+                        <p class="title-foto">Foto 1</p>
+                        <p class="subtitle-foto">lorem <a href="https://google.com" target="_blank">ipsum</a></p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
+                      <div class="content">
+                        <p class="title-foto">Foto 2</p>
+                        <p class="subtitle-foto">cudding.</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="tile is-parent">
+                    <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
+                      <div class="content">
+                        <p class="title-foto">Foto 3</p>
+                        <p class="subtitle-foto">Cerita meow dimulai</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
               </div>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
-              <div class="content">
-                <p class="title-foto">
-                  Foto 2
-                </p>
-                <p class="subtitle-foto">
-                  cudding.
-                </p>   
-              </div>            
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
-              <div class="content">  
-                <p class="title-foto">
-                  Foto 3
-                </p>
-                <p class="subtitle-foto">
-                  Cerita meow dimulai
-                </p>
+              <!-- END IMAGES -->
+
+              <div class="space40px"></div>
+              <div data-aos="fade-up" data-aos-easing="linear">
+                <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
               </div>
-            </article>
-          </div>
-        </div>
-      </div>
-
-      </div>   
-          <!-- IMAGES -->
-          <div class="space40px"></div>
-            <div data-aos="fade-up" data-aos-easing="linear">
-              <img src="image/divider-leaves.png" class="divider has-vertically-align" alt="~~~">
-            </div> 
-            <div class="space40px"></div>
-            <div class="space40px"></div>
-
+              <div class="space40px"></div>
+              <div class="space40px"></div>
+            </div>
           </div>
         </div>
       </section>
-      <!-- End Tentang [Calon Mempelai Wanita] and [Calon Mempelai [Pria] -->
+      <!-- End Tentang Pasangan -->
 
       <!-- Begin RSVP Content -->
       <section class="section-dark contact" id="rsvp">
         <div class="container">
-          <div class="columns is-multiline">          
+          <div class="columns is-multiline">
             <div class="column is-12 prolog">
               <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
             </div>
             <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
               <p class="h2 subtitle">
-                Hai!
-                <br>
-                <br>
-                Nak join?
-                <br>
-                Kalau nk join bole inform 
-                <br>
-                Kalau tanak takpe
-                <br>
-                <br>
-                tenks :D
-                <br>
-                </p>
-     
+                Hai!<br><br>
+                Nak join?<br>
+                Kalau nk join bole inform<br>
+                Kalau tanak takpe<br><br>
+                tenks :D<br>
+              </p>
               <a href="https://api.whatsapp.com/send?phone=601114991990&text=Halo%20ka,%20mau%20join%20bisa%20ga?&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
                 <i class="fab fa-whatsapp"></i>
                 &nbsp;&nbsp;naknaknak
               </a>
-
               <div class="space40px"></div>
-
               <div class="space40px"></div>
               <div data-aos="fade-up" data-aos-easing="linear">
                 <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
               </div>
               <div class="space40px"></div>
               <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-                Kami yang berbahagia,
-                <br>
-                <a class="instagram":" href="https://www.instagram.com/dnlslhn_?igsh=bHNpem5wdzczYmp1" target="_blank" alt="Instagram CPW">
+                Kami yang berbahagia,<br>
+                <a class="instagram" href="https://www.instagram.com/dnlslhn_?igsh=bHNpem5wdzczYmp1" target="_blank">
                   <i class="fab fa-instagram"></i> @niel
                 </a>
-                &nbsp
-                <a class="instagram" href="https://www.instagram.com/1234ti._?igsh=MTVvMjQ1dGNtcmgzZA%3D%3D&utm_source=qr" target="_blank" alt="Instagram CPP">
+                &nbsp;
+                <a class="instagram" href="https://www.instagram.com/1234ti._?igsh=MTVvMjQ1dGNtcmgzZA%3D%3D&utm_source=qr" target="_blank">
                   <i class="fab fa-instagram"></i> @ti
                 </a>
               </p>
-
             </div>
- 
-         </div>
+          </div>
         </div>
       </section>
       <!-- End RSVP Content -->
+
     </div>
     <!-- End Main Content -->
 
@@ -415,7 +336,7 @@
     <div class="footer">
       <div class="container">
         <a href="https://github.com/notpunpun/wedding-invitation.git" class="has-vertically-align">
-          <p class="has-vertically-align">2026 &copy @kyo </p>
+          <p class="has-vertically-align">2026 &copy; @kyo</p>
         </a>
         <a href="https://bulma.io" class="has-vertically-align">
           <img src="https://bulma.io/assets/images/made-with-bulma.png" alt="Made with Bulma">
@@ -427,16 +348,104 @@
     </div>
     <!-- End Footer -->
 
+    <!-- Audio Section -->
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source src="audio/kali.mp3" type="audio/mp3" />
+      </audio>
+      <div class="audio-icon-wrapper">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
+    <!-- Audio Section End -->
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/menikah.js"></script>
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        easing: "ease-out",
-        duration: 800,
+      AOS.init({ easing: "ease-out", duration: 800 });
+    </script>
+
+    <!-- Mobile Navbar Script -->
+    <script>
+      document.getElementById('burger-btn').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-nav');
+        menu.classList.toggle('is-active');
+        this.classList.toggle('is-active');
+      });
+
+      document.querySelectorAll('#mobile-nav .navbar-item').forEach(function (link) {
+        link.addEventListener('click', function () {
+          document.getElementById('mobile-nav').classList.remove('is-active');
+          document.getElementById('burger-btn').classList.remove('is-active');
+        });
       });
     </script>
+
+    <!-- Audio Playback Control -->
+    <script>
+      window.addEventListener("load", function () {
+        const song = document.querySelector("#song");
+        const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+        const audioIcon = audioIconWrapper.querySelector("i");
+        let isPlaying = false;
+
+        song.volume = 0.1;
+
+        song.play().then(() => {
+          isPlaying = true;
+          audioIcon.classList.add("bi-disc");
+        }).catch(() => {
+          isPlaying = false;
+          audioIcon.classList.add("bi-pause-circle");
+        });
+
+        audioIconWrapper.addEventListener("click", function () {
+          if (isPlaying) {
+            song.pause();
+            audioIcon.classList.remove("bi-disc");
+            audioIcon.classList.add("bi-pause-circle");
+          } else {
+            song.play();
+            audioIcon.classList.add("bi-disc");
+            audioIcon.classList.remove("bi-pause-circle");
+          }
+          isPlaying = !isPlaying;
+        });
+      });
+    </script>
+
+    <!-- Confetti Script -->
+    <script>
+      function launchConfetti() {
+        var duration = 4000;
+        var end = Date.now() + duration;
+
+        (function frame() {
+          confetti({
+            particleCount: 4,
+            angle: 90,
+            spread: 120,
+            origin: { x: Math.random(), y: 0.4 },
+            colors: ['#BC8887', '#996E6D', '#EDD2D1', '#F4E2E2', '#D8A9A8', '#ffffff']
+          });
+
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        }());
+      }
+
+      window.addEventListener('load', function () {
+        launchConfetti();
+      });
+
+      document.addEventListener('click', function () {
+        launchConfetti();
+      });
+    </script>
+
   </body>
 </html>

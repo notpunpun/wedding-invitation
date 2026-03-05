@@ -1,0 +1,19 @@
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: #BC8887;        /* changed: use theme color */
+  opacity: 1;            /* changed: full opacity */
+  mix-blend-mode: normal; /* changed: remove difference blend */
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  z-index: 9999;         /* added: ensure it's on top */
+}

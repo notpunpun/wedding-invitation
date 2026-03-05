@@ -22,10 +22,10 @@ html {
 .navbar-item {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
+  text-transform:10 ;
   letter-spacing: 1px;
   font-size: 1rem;
-  box-shadow:  ;
+  box-shadow: 10 ;
 }
 
 .navbar-item.is-active{
@@ -33,7 +33,7 @@ html {
 }
 
 .a.navbar-item{
-  font-color: #996E6D;
+  color: #996E6D;
 }
 
 
@@ -90,7 +90,7 @@ html {
 .hero .hero-foot .hero-foot--wrapper .hero-menu-desktop {
   line-height: 38px;
   font-weight: 600;
-  text-transform: ;
+  text-transform: 9;
   letter-spacing: 1px;
   font-size: 1rem;
 }
@@ -334,7 +334,7 @@ vertical-align: middle;
 .tempat {
   font-size: 1.4rem;
   font-family: 'Raleway', sans-serif;
-  font-size: ;
+  font-size: 1.4rem;
   margin-bottom: 50px;
 }
 
@@ -651,4 +651,31 @@ body.preloader-site {
   vertical-align: middle;
   text-align: center;
   padding: 10px;
+}
+.preloader-wrapper {
+  display: none !important;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: #BC8887;
+  opacity: 1;
+  z-index: 9999;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
