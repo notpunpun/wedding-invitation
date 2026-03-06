@@ -16,6 +16,6 @@ RSVP data is stored here: [Firebase Console](https://console.firebase.google.com
 
 
 ## Next 
-- Add live RSVP confirmation display / guestbook  
+- Add live RSVP confirmation or cancel
 
 ---
