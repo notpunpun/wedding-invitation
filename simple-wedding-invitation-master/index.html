@@ -174,7 +174,7 @@
     <!-- End Header -->
 
     <!-- Begin Main Content -->
-    <div class="main-content">
+    <div class="main-content">~
 
       <!-- Begin regular-section -->
       <section class="section-light no-padding-top regular-section has-text-centered has-vertically-aligned-content" id="regular-section">
@@ -195,7 +195,7 @@
           <div class="ampersand">&</div>
           <div class="nama-lengkap">Danial Solehin</div>
         </div>
-        <span class="space40px"></span>
+        <span class="space40px"></span>~
         <div data-aos="fade-up" data-aos-easing="linear">
           <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
         </div>
@@ -354,44 +354,130 @@ function showSlide(index) {
       <!-- End Tentang Pasangan -->
 
       <!-- Begin RSVP Content -->
-      <section class="section-dark contact" id="rsvp">
-        <div class="container">
-          <div class="columns is-multiline">
-            <div class="column is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
-            </div>
-            <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-              <p class="h2 subtitle">
-                Hai!<br><br>
-                Nak join?<br>
-                Kalau nk join bole inform<br>
-                Kalau tanak takpe<br><br>
-                tenks :D<br>
-              </p>
-              <a href="https://api.whatsapp.com/send?phone=601114991990&text=Halo%20ka,%20mau%20join%20bisa%20ga?&source=&data=" class="button btn-whatsapp" target="_blank" data-aos="zoom-in">
-                <i class="fab fa-whatsapp"></i>
-                &nbsp;&nbsp;naknaknak
-              </a>
-              <div class="space40px"></div>
-              <div class="space40px"></div>
-              <div data-aos="fade-up" data-aos-easing="linear">
-                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
-              </div>
-              <div class="space40px"></div>
-              <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-                Kami yang berbahagia,<br>
-                <a class="instagram" href="https://www.instagram.com/dnlslhn_?igsh=bHNpem5wdzczYmp1" target="_blank">
-                  <i class="fab fa-instagram"></i> @niel
-                </a>
-                &nbsp;
-                <a class="instagram" href="https://www.instagram.com/1234ti._?igsh=MTVvMjQ1dGNtcmgzZA%3D%3D&utm_source=qr" target="_blank">
-                  <i class="fab fa-instagram"></i> @ti
-                </a>
-              </p>
-            </div>
+<section class="section-dark contact" id="rsvp">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-12 prolog">
+        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
+      </div>
+      <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+        <p class="h2 subtitle">
+          Hai!<br><br>
+          Kami sangat berbesar hati sekiranya korang dapat hadir<br>
+          meraikan hari istimewa kami. 🌸<br><br>
+          Sila isi borang di bawah ya!
+        </p>
+
+        <div class="space40px"></div>
+
+        <!-- RSVP Form -->
+        <form id="rsvpForm" class="rsvp-form">
+
+          <div class="rsvp-field">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" placeholder="Nama penuh kamu" required />
           </div>
+
+          <div class="rsvp-field">
+            <label for="kehadiran">Bilangan Kehadiran</label>
+            <select id="kehadiran" required>
+              <option value="" disabled selected>Pilih bilangan</option>
+              <option value="1">1 orang</option>
+              <option value="2">2 orang</option>
+              <option value="3">3 orang</option>
+              <option value="4">4 orang</option>
+              <option value="5+">5 orang atau lebih</option>
+              <option value="Tidak hadir">Tidak dapat hadir 😢</option>
+            </select>
+          </div>
+
+          <div class="rsvp-field">
+            <label for="ucapan">Ucapan / Doa Restu</label>
+            <textarea id="ucapan" placeholder="Tulis ucapan kamu di sini..." rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn-cta" style="margin-top: 1rem;">
+            Hantar RSVP 💌
+          </button>
+
+          <div id="rsvp-success" style="display:none; margin-top:1rem; color:#996E6D; font-weight:700; font-size:1.1rem;">
+            ✅ RSVP berjaya dihantar! Terima kasih 🌸
+          </div>
+          <div id="rsvp-error" style="display:none; margin-top:1rem; color:red; font-size:1rem;">
+            ❌ Ralat semasa menghantar. Cuba lagi ya.
+          </div>
+
+        </form>
+        <!-- End RSVP Form -->
+
+        <div class="space40px"></div>
+        <div class="space40px"></div>
+        <div data-aos="fade-up" data-aos-easing="linear">
+          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
         </div>
-      </section>
+        <div class="space40px"></div>
+        <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
+          Kami yang berbahagia,<br>
+          <a class="instagram" href="https://www.instagram.com/dnlslhn_?igsh=bHNpem5wdzczYmp1" target="_blank">
+            <i class="fab fa-instagram"></i> @niel
+          </a>
+          &nbsp;
+          <a class="instagram" href="https://www.instagram.com/1234ti._?igsh=MTVvMjQ1dGNtcmgzZA%3D%3D&utm_source=qr" target="_blank">
+            <i class="fab fa-instagram"></i> @ti
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End RSVP Content -->
+
+<!-- Firebase RSVP Script -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyA1tQ2qDspDyczoy_Xjm1erO_87cfA2Qy0",
+    authDomain: "happycuddin-567a9.firebaseapp.com",
+    databaseURL: "https://happycuddin-567a9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "happycuddin-567a9",
+    storageBucket: "happycuddin-567a9.firebasestorage.app",
+    messagingSenderId: "292664363549",
+    appId: "1:292664363549:web:6b9e19ef08cf546c1a94f4",
+    measurementId: "G-BQ3Q9GHT40"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  document.getElementById("rsvpForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+    const hadir = document.getElementById("kehadiran").value;
+    const ucapan = document.getElementById("ucapan").value.trim();
+    const successMsg = document.getElementById("rsvp-success");
+    const errorMsg = document.getElementById("rsvp-error");
+
+    successMsg.style.display = "none";
+    errorMsg.style.display = "none";
+
+    try {
+      await push(ref(db, "rsvp"), {
+        nama,
+        kehadiran: hadir,
+        ucapan,
+        masa: Date.now()
+      });
+      successMsg.style.display = "block";
+      this.reset();
+    } catch (err) {
+      console.error(err);
+      errorMsg.style.display = "block";
+    }
+  });
+</script>
       <!-- End RSVP Content -->
 
     </div>

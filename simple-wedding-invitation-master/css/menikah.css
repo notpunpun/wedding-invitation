@@ -982,3 +982,48 @@ body.lock-scroll {
     padding: 0 !important;
   }
 }
+/* RSVP Form */
+.rsvp-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.rsvp-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.2rem;
+}
+
+.rsvp-field label {
+  font-weight: 700;
+  color: #996E6D;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rsvp-field input,
+.rsvp-field select,
+.rsvp-field textarea {
+  padding: 0.75rem 1rem;
+  border: 2px solid #D8A9A8;
+  border-radius: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  background: white;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+  border-color: #996E6D;
+}
+
+.rsvp-field textarea {
+  resize: vertical;
+}
