@@ -12,7 +12,8 @@ RSVP data is stored here: [Firebase Console](https://console.firebase.google.com
 - background music  
 
 ## Preview
-![Website Preview](https://github.com/user-attachments/assets/1534bf3c-d3c9-4038-a354-9667b952fe9c)
+<img width="901" height="419" alt="image" src="https://github.com/user-attachments/assets/b77e32ae-0c33-41a3-b4d2-95ed337cdcfe" />
+
 
 ## Next 
 - Add live RSVP confirmation display / guestbook  
