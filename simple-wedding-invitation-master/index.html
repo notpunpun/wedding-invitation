@@ -82,7 +82,7 @@
         </nav>
         <!-- End Mobile Nav -->
 
-       <!-- Begin Hero Content -->
+        <!-- Begin Hero Content -->
         <div class="hero-body">
           <div class="hero-inner">
             <h1 class="subtitle">Undangan Pernikahan</h1>
@@ -96,57 +96,46 @@
               Terengganu
             </h4>
 
-          <!-- Start Countdown -->
-          <div>
-  <ul id="hitungmundur">
-              <li><span class="days">00</span><p class="days_text">Hari</p></li>
-              <li class="separator">:</li>
-              <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
-              <li class="separator">:</li>
-              <li><span class="minutes">00</span><p class="minutes_text">Menit</p></li>
-              <li class="separator">:</li>
-              <li><span class="seconds">00</span><p class="seconds_text">Detik</p></li>
-            </ul>
-            <div class="spasi"></div>
-            <script type="text/javascript">
-              var harih = '09/05/2026 17:00:00';
-              $('#hitungmundur').countdown({
-                date: harih,
-                offset: +7,
-                day: 'Hari',
-                days: 'Hari'
-              }, function () {
-                alert('Done!');
-              });
-            </script>
-          </div>
-          
-          <!-- End Countdown -->
-           <div style="margin-top:16px; display:flex; justify-content:center;">
-  <button id="open-invite" class="btn-cta">
-               Buka Undangan
-             </button>
+            <!-- Start Countdown -->
+            <div>
+              <ul id="hitungmundur">
+                <li><span class="days">00</span><p class="days_text">Hari</p></li>
+                <li class="separator">:</li>
+                <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
+                <li class="separator">:</li>
+                <li><span class="minutes">00</span><p class="minutes_text">Menit</p></li>
+                <li class="separator">:</li>
+                <li><span class="seconds">00</span><p class="seconds_text">Detik</p></li>
+              </ul>
+              <div class="spasi"></div>
+              <script type="text/javascript">
+                var harih = '09/05/2026 17:00:00';
+                $('#hitungmundur').countdown({
+                  date: harih,
+                  offset: +7,
+                  day: 'Hari',
+                  days: 'Hari'
+                }, function () {
+                  alert('Done!');
+                });
+              </script>
+            </div>
+            <!-- End Countdown -->
+
+            <div style="margin-top:16px; display:flex; justify-content:center;">
+              <button id="open-invite" class="btn-cta">Buka Undangan</button>
             </div>
           </div><!-- end hero-inner -->
 
-            <script>document.getElementById("open-invite").addEventListener("click", function () {
-
-  // unlock scroll
-  document.body.classList.remove("lock-scroll");
-
-  // play music
-  const song = document.getElementById("song");
-  song.volume = 0.1;
-  song.play().catch(()=>{});
-
-  // auto scroll
-  window.scrollTo({
-    top: window.innerHeight,
-    behavior: "smooth"
-  });
-
-});</script>
-
+          <script>
+            document.getElementById("open-invite").addEventListener("click", function () {
+              document.body.classList.remove("lock-scroll");
+              const song = document.getElementById("song");
+              song.volume = 0.1;
+              song.play().catch(()=>{});
+              window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+            });
+          </script>
         </div>
         <!-- End Hero Content -->
 
@@ -290,42 +279,24 @@
 
                   <div class="slide slide-video">
                     <video class="slide-vid1" autoplay loop muted playsinline>
-                       <source src="video/vid2.mp4" type="video/mp4" />
-                       </video>
-                      <div class="slide-content">
+                      <source src="video/vid2.mp4" type="video/mp4" />
+                    </video>
+                    <div class="slide-content">
                       <p class="title-foto">Video</p>
                       <p class="subtitle-foto">Bih</p>
-                      </div>
+                    </div>
                   </div>
 
                   <div class="slide slide-video">
                     <video class="slide-vid2" autoplay loop muted playsinline>
-                       <source src="video/vid3.mp4" type="video/mp4" />
-                       </video>
-                      <div class="slide-content">
+                      <source src="video/vid3.mp4" type="video/mp4" />
+                    </video>
+                    <div class="slide-content">
                       <p class="title-foto">Video</p>
                       <p class="subtitle-foto">Bih</p>
-                      </div>
+                    </div>
                   </div>
-<script>
-function showSlide(index) {
-  slides.forEach(s => {
-    s.classList.remove('active');
-    const vid = s.querySelector('video');
-    if (vid) { vid.pause(); vid.currentTime = 0; }
-  });
-  dots.forEach(d => d.classList.remove('active'));
-  currentSlide = (index + slides.length) % slides.length;
-  slides[currentSlide].classList.add('active');
-  dots[currentSlide].classList.add('active');
 
-  const activeVid = slides[currentSlide].querySelector('video');
-  if (activeVid) {
-    activeVid.muted = true;
-    activeVid.play();
-  }
-}
-</script>
                   <!-- Prev / Next Buttons -->
                   <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
                   <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
@@ -354,203 +325,111 @@ function showSlide(index) {
       <!-- End Tentang Pasangan -->
 
       <!-- Begin RSVP Content -->
-<section class="section-dark contact" id="rsvp">
-  <div class="container">
-    <div class="columns is-multiline">
-      <div class="column is-12 prolog">
-        <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
-      </div>
-      <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-        <p class="h2 subtitle">
-          Hai!<br><br>
-          Kami sangat berbesar hati sekiranya korang dapat hadir<br>
-          meraikan hari istimewa kami. 🌸<br><br>
-          Sila isi borang di bawah ya!
-        </p>
+      <section class="section-dark contact" id="rsvp">
+        <div class="container">
+          <div class="columns is-multiline">
+            <div class="column is-12 prolog">
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Konfirmasi Kehadiran</h1>
+            </div>
+            <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
+              <p class="h2 subtitle">
+                Hai!<br><br>
+                Kami sangat berbesar hati sekiranya korang dapat hadir<br>
+                meraikan hari istimewa kami. 🌸<br><br>
+                Sila isi borang di bawah ya!
+              </p>
 
-        <div class="space40px"></div>
+              <div class="space40px"></div>
 
-        <!-- RSVP Form -->
-         <!-- Pax Counter -->
-<div class="pax-counter" data-aos="fade-up">
-  <div id="pax-text" style="font-size:1rem; margin-bottom:0.6rem;">
-    Memuatkan...
-  </div>
-  <div class="pax-bar-track">
-    <div id="pax-bar" class="pax-bar-fill"></div>
-  </div>
-</div>
-<div class="space40px"></div>
-        <form id="rsvpForm" class="rsvp-form">
+              <!-- Pax Counter -->
+              <div class="pax-counter" data-aos="fade-up">
+                <div id="pax-text" style="font-size:1rem; margin-bottom:0.6rem;">Memuatkan...</div>
+                <div class="pax-bar-track">
+                  <div id="pax-bar" class="pax-bar-fill"></div>
+                </div>
+              </div>
+              <div class="space40px"></div>
 
-          <div class="rsvp-field">
-            <label for="nama">Nama</label>
-            <input type="text" id="nama" placeholder="Nama" required />
+              <!-- RSVP Form -->
+              <form id="rsvpForm" class="rsvp-form">
+                <div class="rsvp-field">
+                  <label for="nama">Nama</label>
+                  <input type="text" id="nama" placeholder="Nama" required />
+                </div>
+                <div class="rsvp-field">
+                  <label for="kehadiran">Bilangan Kehadiran</label>
+                  <select id="kehadiran" required>
+                    <option value="" disabled selected>Pilih bilangan</option>
+                    <option value="1">1 orang</option>
+                    <option value="2">2 orang</option>
+                    <option value="3">3 orang</option>
+                    <option value="4">4 orang</option>
+                    <option value="5+">5 orang atau lebih</option>
+                    <option value="Tidak hadir">Tidak dapat hadir 😢</option>
+                  </select>
+                </div>
+                <div class="rsvp-field">
+                  <label for="ucapan">Ucapan / Doa Restu</label>
+                  <textarea id="ucapan" placeholder="Tulis ucapan di sini..." rows="4"></textarea>
+                </div>
+                <div style="text-align:center; margin-top:1rem;">
+                  <button type="submit" class="btn-cta">Hantar RSVP 💌</button>
+                </div>
+                <div id="rsvp-error" style="display:none; margin-top:1rem; color:red; font-size:1rem; text-align:center;"></div>
+              </form>
+              <!-- End RSVP Form -->
+
+              <!-- Delete RSVP toggle link -->
+              <div style="margin-top:1.5rem; text-align:center;">
+                <a href="#" onclick="toggleDeleteForm(); return false;" style="color:#BC8887; font-size:0.9rem; font-family:'Raleway',sans-serif; text-decoration:underline;">
+                  Nak padam RSVP saya
+                </a>
+              </div>
+
+              <!-- Delete RSVP Section (hidden by default) -->
+              <div id="delete-rsvp-section" style="display:none; margin-top:2rem;">
+                <div style="max-width:560px; margin:0 auto;">
+                  <p style="text-align:center; color:#996E6D; font-weight:700; margin-bottom:1rem; font-family:'Raleway',sans-serif;">
+                    Senarai RSVP
+                  </p>
+                  <!-- Search bar -->
+                  <div class="rsvp-field">
+                    <input type="text" id="rsvp-search" placeholder="🔍 Cari nama..." oninput="filterRsvpList()" style="width:100%; padding:0.75rem 1rem; border:2px solid #D8A9A8; border-radius:10px; font-family:'Raleway',sans-serif; font-size:1rem; outline:none;" />
+                  </div>
+                  <!-- List container -->
+                  <div id="rsvp-list-container" style="margin-top:1rem; max-height:320px; overflow-y:auto; border-radius:10px;">
+                    <div id="rsvp-list-loading" style="text-align:center; color:#996E6D; padding:1rem; font-family:'Raleway',sans-serif;">
+                      Memuatkan senarai...
+                    </div>
+                    <div id="rsvp-list-empty" style="display:none; text-align:center; color:#aaa; padding:1rem; font-family:'Raleway',sans-serif;">
+                      Tiada rekod dijumpai.
+                    </div>
+                    <div id="rsvp-list-items"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Delete RSVP Section -->
+
+              <div class="space40px"></div>
+              <div class="space40px"></div>
+              <div data-aos="fade-up" data-aos-easing="linear">
+                <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
+              </div>
+              <div class="space40px"></div>
+              <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
+                Kami yang berbahagia,<br>
+                <a class="instagram" href="https://www.instagram.com/dnlslhn_?igsh=bHNpem5wdzczYmp1" target="_blank">
+                  <i class="fab fa-instagram"></i> @niel
+                </a>
+                &nbsp;
+                <a class="instagram" href="https://www.instagram.com/1234ti._?igsh=MTVvMjQ1dGNtcmgzZA%3D%3D&utm_source=qr" target="_blank">
+                  <i class="fab fa-instagram"></i> @ti
+                </a>
+              </p>
+            </div>
           </div>
-
-          <div class="rsvp-field">
-            <label for="kehadiran">Bilangan Kehadiran</label>
-            <select id="kehadiran" required>
-              <option value="" disabled selected>Pilih bilangan</option>
-              <option value="1">1 orang</option>
-              <option value="2">2 orang</option>
-              <option value="3">3 orang</option>
-              <option value="4">4 orang</option>
-              <option value="5+">5 orang atau lebih</option>
-              <option value="Tidak hadir">Tidak dapat hadir 😢</option>
-            </select>
-          </div>
-
-          <div class="rsvp-field">
-            <label for="ucapan">Ucapan / Doa Restu</label>
-            <textarea id="ucapan" placeholder="Tulis ucapan di sini..." rows="4"></textarea>
-          </div>
-
-          <div style="text-align: center; margin-top: 1rem;">
-  <button type="submit" class="btn-cta">
-    Hantar RSVP 💌
-  </button>
-</div>
-
-          <div id="rsvp-success" style="display:none; margin-top:1rem; color:#996E6D; font-weight:700; font-size:1.1rem;">
-            ✅ RSVP berjaya dihantar! Terima kasih 🌸
-          </div>
-          <div id="rsvp-error" style="display:none; margin-top:1rem; color:red; font-size:1rem;">
-            ❌ Ralat semasa menghantar. Cuba lagi ya.
-          </div>
-
-        </form>
-        <!-- End RSVP Form -->
-
-        <div class="space40px"></div>
-        <div class="space40px"></div>
-        <div data-aos="fade-up" data-aos-easing="linear">
-          <img src="image/divider-leaves.png" class="divider has-text-centered" alt="~~~">
         </div>
-        <div class="space40px"></div>
-        <p class="h2 subtitle" data-aos="fade-up" data-aos-easing="linear">
-          Kami yang berbahagia,<br>
-          <a class="instagram" href="https://www.instagram.com/dnlslhn_?igsh=bHNpem5wdzczYmp1" target="_blank">
-            <i class="fab fa-instagram"></i> @niel
-          </a>
-          &nbsp;
-          <a class="instagram" href="https://www.instagram.com/1234ti._?igsh=MTVvMjQ1dGNtcmgzZA%3D%3D&utm_source=qr" target="_blank">
-            <i class="fab fa-instagram"></i> @ti
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End RSVP Content -->
-
-<!-- Firebase RSVP Script -->
-<!-- Firebase RSVP Script -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-  import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA1tQ2qDspDyczoy_Xjm1erO_87cfA2Qy0",
-    authDomain: "happycuddin-567a9.firebaseapp.com",
-    databaseURL: "https://happycuddin-567a9-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "happycuddin-567a9",
-    storageBucket: "happycuddin-567a9.firebasestorage.app",
-    messagingSenderId: "292664363549",
-    appId: "1:292664363549:web:6b9e19ef08cf546c1a94f4"
-  };
-
-  const MAX_PAX = 300;
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
-
-  async function getTotalPax() {
-    try {
-      const snapshot = await get(ref(db, "rsvp"));
-      let total = 0;
-      if (snapshot.exists()) {
-        snapshot.forEach(entry => {
-          const val = entry.val();
-          const k = val.kehadiran;
-          if (k && k !== "Tidak hadir") {
-            const num = k === "5+" ? 5 : parseInt(k);
-            if (!isNaN(num)) total += num;
-          }
-        });
-      }
-      return total;
-    } catch (err) {
-      console.error("getTotalPax error:", err);
-      return 0;
-    }
-  }
-
-  async function updatePaxDisplay() {
-    const total = await getTotalPax();
-    const remaining = MAX_PAX - total;
-    const bar = document.getElementById("pax-bar");
-    const text = document.getElementById("pax-text");
-    const percent = Math.min((total / MAX_PAX) * 100, 100);
-
-    if (remaining <= 0) {
-      text.innerHTML = `😢 Maaf, tempat sudah penuh! (${MAX_PAX}/${MAX_PAX} pax)`;
-      text.style.color = "#c0392b";
-      document.getElementById("rsvpForm").style.display = "none";
-    } else {
-      text.innerHTML = `🎉 <strong>${remaining}</strong> tempat lagi tersedia daripada ${MAX_PAX} pax`;
-      text.style.color = "#996E6D";
-    }
-
-    bar.style.width = percent + "%";
-    bar.style.background = percent >= 90 ? "#c0392b" : percent >= 60 ? "#e67e22" : "#996E6D";
-  }
-
-  updatePaxDisplay();
-
-  document.getElementById("rsvpForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const nama = document.getElementById("nama").value.trim();
-    const hadir = document.getElementById("kehadiran").value;
-    const ucapan = document.getElementById("ucapan").value.trim();
-    const successMsg = document.getElementById("rsvp-success");
-    const errorMsg = document.getElementById("rsvp-error");
-
-    successMsg.style.display = "none";
-    errorMsg.style.display = "none";
-
-    if (hadir !== "Tidak hadir") {
-      const total = await getTotalPax();
-      const adding = hadir === "5+" ? 5 : parseInt(hadir);
-      if (total + adding > MAX_PAX) {
-        errorMsg.textContent = `❌ Maaf! Hanya ${MAX_PAX - total} tempat lagi tersedia.`;
-        errorMsg.style.display = "block";
-        return;
-      }
-    }
-
-    try {
-      await push(ref(db, "rsvp"), {
-        nama,
-        kehadiran: hadir,
-        ucapan,
-        masa: Date.now()
-      });
-      this.reset();
-      await updatePaxDisplay();
-
-      // Show popup
-      document.getElementById("rsvp-popup-name").textContent = nama;
-      document.getElementById("rsvp-popup-pax").textContent = hadir === "Tidak hadir" ? "Tidak hadir" : `${hadir === "5+" ? "5+" : hadir} orang`;
-      document.getElementById("rsvp-popup").style.display = "flex";
-
-    } catch (err) {
-      console.error("Submit error:", err);
-      errorMsg.textContent = "❌ Ralat semasa menghantar. Cuba lagi ya.";
-      errorMsg.style.display = "block";
-    }
-  });
-</script>
+      </section>
       <!-- End RSVP Content -->
 
     </div>
@@ -583,6 +462,58 @@ function showSlide(index) {
     </div>
     <!-- Audio Section End -->
 
+    <!-- ══ POPUPS (inside body, before closing tag) ══ -->
+
+    <!-- Confirm Popup -->
+    <div id="rsvp-confirm-popup" style="display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center;">
+      <div class="rsvp-popup-overlay" onclick="cancelRsvp()"></div>
+      <div class="rsvp-popup-box">
+        <div class="rsvp-popup-icon">📋</div>
+        <h2 class="rsvp-popup-title">Sahkan RSVP</h2>
+        <p class="rsvp-popup-msg">
+          Nama: <strong id="confirm-popup-name"></strong><br>
+          Kehadiran: <strong id="confirm-popup-pax"></strong><br>
+          Ucapan: <em id="confirm-popup-ucapan"></em>
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <button class="btn-cta" onclick="confirmRsvp()">✅ Confirm</button>
+          <button class="btn-cancel" onclick="cancelRsvp()">✖ Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="rsvp-success-popup" style="display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center;">
+      <div class="rsvp-popup-overlay" onclick="closeSuccessPopup()"></div>
+      <div class="rsvp-popup-box">
+        <div class="rsvp-popup-icon">💌</div>
+        <h2 class="rsvp-popup-title">Terima Kasih!</h2>
+        <p class="rsvp-popup-msg">
+          RSVP berjaya dihantar!<br><br>
+          Kami tidak sabar nak jumpa korang! 🌸
+        </p>
+        <button class="btn-cta" onclick="closeSuccessPopup()">Tutup</button>
+      </div>
+    </div>
+
+    <!-- Delete Confirm Popup -->
+    <div id="rsvp-delete-confirm-popup" style="display:none; position:fixed; inset:0; z-index:99999; align-items:center; justify-content:center;">
+      <div class="rsvp-popup-overlay" onclick="cancelDelete()"></div>
+      <div class="rsvp-popup-box">
+        <div class="rsvp-popup-icon">🗑️</div>
+        <h2 class="rsvp-popup-title">Padam RSVP?</h2>
+        <p class="rsvp-popup-msg">
+          Nama: <strong id="delete-confirm-name"></strong><br>
+          Kehadiran: <strong id="delete-confirm-pax"></strong><br><br>
+          Tindakan ini tidak boleh dibatalkan.
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+          <button class="btn-cancel" onclick="confirmDelete()">🗑 Ya, Padam</button>
+          <button class="btn-cta" onclick="cancelDelete()">Batal</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/menikah.js"></script>
@@ -599,7 +530,6 @@ function showSlide(index) {
         menu.classList.toggle('is-active');
         this.classList.toggle('is-active');
       });
-
       document.querySelectorAll('#mobile-nav .navbar-item').forEach(function (link) {
         link.addEventListener('click', function () {
           document.getElementById('mobile-nav').classList.remove('is-active');
@@ -615,9 +545,7 @@ function showSlide(index) {
         const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
         const audioIcon = audioIconWrapper.querySelector("i");
         let isPlaying = false;
-
         song.volume = 0.1;
-
         song.play().then(() => {
           isPlaying = true;
           audioIcon.classList.add("bi-disc");
@@ -625,7 +553,6 @@ function showSlide(index) {
           isPlaying = false;
           audioIcon.classList.add("bi-pause-circle");
         });
-
         audioIconWrapper.addEventListener("click", function (e) {
           e.stopPropagation();
           if (isPlaying) {
@@ -658,7 +585,6 @@ function showSlide(index) {
           if (Date.now() < end) requestAnimationFrame(frame);
         }());
       }
-
       window.addEventListener('load', function () { launchConfetti(); });
       document.addEventListener('click', function (e) {
         if (e.target.closest('.audio-icon-wrapper')) return;
@@ -667,67 +593,241 @@ function showSlide(index) {
     </script>
 
     <!-- Slideshow Script -->
-    <!-- Slideshow Script -->
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-  const dots = document.querySelectorAll('.dot');
+    <script>
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
 
-  function showSlide(index) {
-    slides.forEach(s => {
-      s.classList.remove('active');
-      const vid = s.querySelector('video');
-      if (vid) { vid.pause(); vid.currentTime = 0; }
-    });
-    dots.forEach(d => d.classList.remove('active'));
-    currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    dots[currentSlide].classList.add('active');
+      function showSlide(index) {
+        slides.forEach(s => {
+          s.classList.remove('active');
+          const vid = s.querySelector('video');
+          if (vid) { vid.pause(); vid.currentTime = 0; }
+        });
+        dots.forEach(d => d.classList.remove('active'));
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+        const activeVid = slides[currentSlide].querySelector('video');
+        if (activeVid) { activeVid.muted = true; activeVid.play(); }
+      }
 
-    const activeVid = slides[currentSlide].querySelector('video');
-    if (activeVid) {
-      activeVid.muted = true;
-      activeVid.play();
-    }
-  }
+      function changeSlide(direction) { showSlide(currentSlide + direction); }
+      function goToSlide(index) { showSlide(index); }
+      setInterval(() => changeSlide(1), 6000);
+    </script>
 
-  function changeSlide(direction) {
-    showSlide(currentSlide + direction);
-  }
+    <script>
+      document.body.classList.add("lock-scroll");
+    </script>
 
-  function goToSlide(index) {
-    showSlide(index);
-  }
+    <!-- Popup & List helpers -->
+    <script>
+      function toggleDeleteForm() {
+        const el = document.getElementById("delete-rsvp-section");
+        const isHidden = el.style.display === "none";
+        el.style.display = isHidden ? "block" : "none";
+        if (isHidden) window.loadRsvpList && window.loadRsvpList();
+      }
+      function cancelRsvp() {
+        document.getElementById("rsvp-confirm-popup").style.display = "none";
+      }
+      function closeSuccessPopup() {
+        document.getElementById("rsvp-success-popup").style.display = "none";
+      }
+      function cancelDelete() {
+        document.getElementById("rsvp-delete-confirm-popup").style.display = "none";
+        window._pendingDeleteKey = null;
+      }
+      function filterRsvpList() {
+        const q = document.getElementById("rsvp-search").value.toLowerCase();
+        document.querySelectorAll(".rsvp-list-row").forEach(row => {
+          row.style.display = row.dataset.name.includes(q) ? "flex" : "none";
+        });
+        const visible = [...document.querySelectorAll(".rsvp-list-row")].filter(r => r.style.display !== "none");
+        document.getElementById("rsvp-list-empty").style.display = visible.length === 0 ? "block" : "none";
+      }
+    </script>
 
-  // Auto advance every x seconds
-  setInterval(() => changeSlide(1), 6000);
-</script>
+    <!-- Firebase RSVP Script -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+      import { getDatabase, ref, push, get, remove, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-<script>
-  document.body.classList.add("lock-scroll");
-</script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyA1tQ2qDspDyczoy_Xjm1erO_87cfA2Qy0",
+        authDomain: "happycuddin-567a9.firebaseapp.com",
+        databaseURL: "https://happycuddin-567a9-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "happycuddin-567a9",
+        storageBucket: "happycuddin-567a9.firebasestorage.app",
+        messagingSenderId: "292664363549",
+        appId: "1:292664363549:web:6b9e19ef08cf546c1a94f4"
+      };
 
-<!-- RSVP Popup -->
-<div id="rsvp-popup" style="display:none;">
-  <div class="rsvp-popup-overlay" onclick="closeRsvpPopup()"></div>
-  <div class="rsvp-popup-box">
-    <div class="rsvp-popup-icon">💌</div>
-    <h2 class="rsvp-popup-title">Terima Kasih!</h2>
-    <p class="rsvp-popup-msg">
-      RSVP <strong id="rsvp-popup-name"></strong> telah berjaya dihantar.<br><br>
-      Bilangan kehadiran: <strong id="rsvp-popup-pax"></strong><br><br>
-      lesgooo bic! 🌸
-    </p>
-    <button class="btn-cta" onclick="closeRsvpPopup()">Tutup</button>
-  </div>
-</div>
+      const MAX_PAX = 300;
+      const app = initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      let pendingData = null;
 
-<script>
-  function closeRsvpPopup() {
-    document.getElementById("rsvp-popup").style.display = "none";
-  }
-</script>
-  </body>
+      // ── Pax counter ──
+      async function getTotalPax() {
+        try {
+          const snapshot = await get(ref(db, "rsvp"));
+          let total = 0;
+          if (snapshot.exists()) {
+            snapshot.forEach(entry => {
+              const val = entry.val();
+              const k = val.kehadiran;
+              if (k && k !== "Tidak hadir") {
+                const num = k === "5+" ? 5 : parseInt(k);
+                if (!isNaN(num)) total += num;
+              }
+            });
+          }
+          return total;
+        } catch (err) {
+          console.error("getTotalPax error:", err);
+          return 0;
+        }
+      }
+
+      async function updatePaxDisplay() {
+        const total = await getTotalPax();
+        const remaining = MAX_PAX - total;
+        const bar = document.getElementById("pax-bar");
+        const text = document.getElementById("pax-text");
+        const percent = Math.min((total / MAX_PAX) * 100, 100);
+        if (remaining <= 0) {
+          text.innerHTML = `😢 Maaf, tempat sudah penuh! (${MAX_PAX}/${MAX_PAX} pax)`;
+          text.style.color = "#c0392b";
+          document.getElementById("rsvpForm").style.display = "none";
+        } else {
+          text.innerHTML = `🎉 <strong>${remaining}</strong> tempat lagi tersedia daripada ${MAX_PAX} pax`;
+          text.style.color = "#996E6D";
+        }
+        bar.style.width = percent + "%";
+        bar.style.background = percent >= 90 ? "#c0392b" : percent >= 60 ? "#e67e22" : "#996E6D";
+      }
+
+      updatePaxDisplay();
+
+      // ── RSVP list ──
+      window.loadRsvpList = async function () {
+        const container = document.getElementById("rsvp-list-items");
+        const loading = document.getElementById("rsvp-list-loading");
+        const empty = document.getElementById("rsvp-list-empty");
+        loading.style.display = "block";
+        container.innerHTML = "";
+        empty.style.display = "none";
+
+        try {
+          const snapshot = await get(ref(db, "rsvp"));
+          loading.style.display = "none";
+
+          if (!snapshot.exists()) {
+            empty.style.display = "block";
+            return;
+          }
+
+          let rows = [];
+          snapshot.forEach(entry => {
+            const val = entry.val();
+            rows.push({ key: entry.key, nama: val.nama, kehadiran: val.kehadiran });
+          });
+
+          // Sort A-Z
+          rows.sort((a, b) => a.nama.localeCompare(b.nama));
+
+          rows.forEach(({ key, nama, kehadiran }) => {
+            const row = document.createElement("div");
+            row.className = "rsvp-list-row";
+            row.dataset.name = nama.toLowerCase();
+            row.innerHTML = `
+              <div class="rsvp-list-info">
+                <span class="rsvp-list-name">${nama}</span>
+                <span class="rsvp-list-pax">${kehadiran === "Tidak hadir" ? "Tidak hadir 😢" : kehadiran + " orang"}</span>
+              </div>
+              <button class="rsvp-list-del-btn" onclick="promptDelete('${key}', '${nama.replace(/'/g,"\\'")}', '${kehadiran}')">🗑</button>
+            `;
+            container.appendChild(row);
+          });
+
+          if (rows.length === 0) empty.style.display = "block";
+
+        } catch (err) {
+          console.error("loadRsvpList error:", err);
+          loading.textContent = "❌ Gagal muatkan senarai.";
+        }
+      };
+
+      // ── Prompt delete confirm ──
+      window.promptDelete = function (key, nama, pax) {
+        window._pendingDeleteKey = key;
+        document.getElementById("delete-confirm-name").textContent = nama;
+        document.getElementById("delete-confirm-pax").textContent = pax === "Tidak hadir" ? "Tidak hadir 😢" : pax + " orang";
+        document.getElementById("rsvp-delete-confirm-popup").style.display = "flex";
+      };
+
+      // ── Confirm delete → remove from Firebase ──
+      window.confirmDelete = async function () {
+        const key = window._pendingDeleteKey;
+        if (!key) return;
+        document.getElementById("rsvp-delete-confirm-popup").style.display = "none";
+        try {
+          await remove(ref(db, `rsvp/${key}`));
+          await updatePaxDisplay();
+          await window.loadRsvpList();
+        } catch (err) {
+          console.error("Delete error:", err);
+          alert("❌ Ralat semasa memadam. Cuba lagi.");
+        }
+        window._pendingDeleteKey = null;
+      };
+
+      // ── Submit RSVP form → confirm popup ──
+      document.getElementById("rsvpForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const nama = document.getElementById("nama").value.trim();
+        const hadir = document.getElementById("kehadiran").value;
+        const ucapan = document.getElementById("ucapan").value.trim();
+        const errorMsg = document.getElementById("rsvp-error");
+        errorMsg.style.display = "none";
+
+        if (hadir !== "Tidak hadir") {
+          const total = await getTotalPax();
+          const adding = hadir === "5+" ? 5 : parseInt(hadir);
+          if (total + adding > MAX_PAX) {
+            errorMsg.textContent = `❌ Maaf! Hanya ${MAX_PAX - total} tempat lagi tersedia.`;
+            errorMsg.style.display = "block";
+            return;
+          }
+        }
+
+        pendingData = { nama, kehadiran: hadir, ucapan, masa: Date.now() };
+        document.getElementById("confirm-popup-name").textContent = nama;
+        document.getElementById("confirm-popup-pax").textContent = hadir === "Tidak hadir" ? "Tidak hadir 😢" : `${hadir} orang`;
+        document.getElementById("confirm-popup-ucapan").textContent = ucapan || "—";
+        document.getElementById("rsvp-confirm-popup").style.display = "flex";
+      });
+
+      // ── Confirm RSVP → save ──
+      window.confirmRsvp = async function () {
+        if (!pendingData) return;
+        document.getElementById("rsvp-confirm-popup").style.display = "none";
+        try {
+          await push(ref(db, "rsvp"), pendingData);
+          pendingData = null;
+          document.getElementById("rsvpForm").reset();
+          await updatePaxDisplay();
+          document.getElementById("rsvp-success-popup").style.display = "flex";
+        } catch (err) {
+          console.error("Submit error:", err);
+          const errorMsg = document.getElementById("rsvp-error");
+          errorMsg.textContent = "❌ Ralat semasa menghantar. Cuba lagi ya.";
+          errorMsg.style.display = "block";
+        }
+      };
+    </script>
 
   </body>
 </html>
