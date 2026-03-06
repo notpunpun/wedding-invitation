@@ -943,3 +943,42 @@ body.lock-scroll {
 .hero .title {
     transform: none !important;
   }
+  /* ── Desktop Hero Fix ── */
+@media (min-width: 769px) {
+  .hero-inner {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .hero .title {
+    text-align: center !important;
+    font-size: 3rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero .subtitle {
+    text-align: center !important;
+    padding: 8px !important;
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  .hero .tempatwaktu {
+    text-align: center !important;
+    font-size: 1rem !important;
+    padding-top: 4px !important;
+  }
+
+  #hitungmundur {
+    display: flex !important;
+    justify-content: center !important;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
