@@ -385,7 +385,7 @@ function showSlide(index) {
 
           <div class="rsvp-field">
             <label for="nama">Nama</label>
-            <input type="text" id="nama" placeholder="Nama penuh kamu" required />
+            <input type="text" id="nama" placeholder="Nama" required />
           </div>
 
           <div class="rsvp-field">
@@ -403,12 +403,14 @@ function showSlide(index) {
 
           <div class="rsvp-field">
             <label for="ucapan">Ucapan / Doa Restu</label>
-            <textarea id="ucapan" placeholder="Tulis ucapan kamu di sini..." rows="4"></textarea>
+            <textarea id="ucapan" placeholder="Tulis ucapan di sini..." rows="4"></textarea>
           </div>
 
-          <button type="submit" class="btn-cta" style="margin-top: 1rem;">
-            Hantar RSVP 💌
-          </button>
+          <div style="text-align: center; margin-top: 1rem;">
+  <button type="submit" class="btn-cta">
+    Hantar RSVP 💌
+  </button>
+</div>
 
           <div id="rsvp-success" style="display:none; margin-top:1rem; color:#996E6D; font-weight:700; font-size:1.1rem;">
             ✅ RSVP berjaya dihantar! Terima kasih 🌸
@@ -534,9 +536,14 @@ function showSlide(index) {
         ucapan,
         masa: Date.now()
       });
-      successMsg.style.display = "block";
       this.reset();
       await updatePaxDisplay();
+
+      // Show popup
+      document.getElementById("rsvp-popup-name").textContent = nama;
+      document.getElementById("rsvp-popup-pax").textContent = hadir === "Tidak hadir" ? "Tidak hadir" : `${hadir === "5+" ? "5+" : hadir} orang`;
+      document.getElementById("rsvp-popup").style.display = "flex";
+
     } catch (err) {
       console.error("Submit error:", err);
       errorMsg.textContent = "❌ Ralat semasa menghantar. Cuba lagi ya.";
@@ -700,6 +707,26 @@ function showSlide(index) {
   document.body.classList.add("lock-scroll");
 </script>
 
+<!-- RSVP Popup -->
+<div id="rsvp-popup" style="display:none;">
+  <div class="rsvp-popup-overlay" onclick="closeRsvpPopup()"></div>
+  <div class="rsvp-popup-box">
+    <div class="rsvp-popup-icon">💌</div>
+    <h2 class="rsvp-popup-title">Terima Kasih!</h2>
+    <p class="rsvp-popup-msg">
+      RSVP <strong id="rsvp-popup-name"></strong> telah berjaya dihantar.<br><br>
+      Bilangan kehadiran: <strong id="rsvp-popup-pax"></strong><br><br>
+      lesgooo bic! 🌸
+    </p>
+    <button class="btn-cta" onclick="closeRsvpPopup()">Tutup</button>
+  </div>
+</div>
+
+<script>
+  function closeRsvpPopup() {
+    document.getElementById("rsvp-popup").style.display = "none";
+  }
+</script>
   </body>
 
   </body>
