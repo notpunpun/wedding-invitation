@@ -10,9 +10,9 @@ All RSVP submissions are stored here: [Firebase Console](https://console.firebas
 ---
 
 ## ✨ Features
-- Interactive RSVP form  
-- Confetti animation 🎉  
-- Countdown timer to the wedding  
+- RSVP form  
+- Confetti! :D 🎉  
+- Countdown timer 
 - Background music  
 
 ---
@@ -33,5 +33,4 @@ All RSVP submissions are stored here: [Firebase Console](https://console.firebas
 ---
 
 ## 🔜 Next Steps
-- Add **live RSVP confirmation / cancellation**  
-- Optimize for faster loading & smaller bundle size  
+- myb clean kan delete rsvp
