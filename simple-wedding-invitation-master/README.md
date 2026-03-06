@@ -33,4 +33,4 @@ All RSVP submissions are stored here: [Firebase Console](https://console.firebas
 ---
 
 ## 🔜 Next Steps
-- myb clean kan delete rsvp
+- myb clean kan delete rsvp, add warning dont delete other's rsvp
