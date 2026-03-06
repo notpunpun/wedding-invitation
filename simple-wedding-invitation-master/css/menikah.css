@@ -1027,3 +1027,26 @@ body.lock-scroll {
 .rsvp-field textarea {
   resize: vertical;
 }
+/* Pax Counter */
+.pax-counter {
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+.pax-bar-track {
+  width: 100%;
+  height: 12px;
+  background: #EDD2D1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.pax-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #996E6D;
+  border-radius: 20px;
+  transition: width 0.8s ease, background 0.5s ease;
+}

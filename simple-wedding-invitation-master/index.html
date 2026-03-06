@@ -371,6 +371,16 @@ function showSlide(index) {
         <div class="space40px"></div>
 
         <!-- RSVP Form -->
+         <!-- Pax Counter -->
+<div class="pax-counter" data-aos="fade-up">
+  <div id="pax-text" style="font-size:1rem; margin-bottom:0.6rem;">
+    Memuatkan...
+  </div>
+  <div class="pax-bar-track">
+    <div id="pax-bar" class="pax-bar-fill"></div>
+  </div>
+</div>
+<div class="space40px"></div>
         <form id="rsvpForm" class="rsvp-form">
 
           <div class="rsvp-field">
@@ -433,9 +443,10 @@ function showSlide(index) {
 <!-- End RSVP Content -->
 
 <!-- Firebase RSVP Script -->
+<!-- Firebase RSVP Script -->
 <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
-  import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-database.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase, ref, push, get } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyA1tQ2qDspDyczoy_Xjm1erO_87cfA2Qy0",
@@ -444,12 +455,55 @@ function showSlide(index) {
     projectId: "happycuddin-567a9",
     storageBucket: "happycuddin-567a9.firebasestorage.app",
     messagingSenderId: "292664363549",
-    appId: "1:292664363549:web:6b9e19ef08cf546c1a94f4",
-    measurementId: "G-BQ3Q9GHT40"
+    appId: "1:292664363549:web:6b9e19ef08cf546c1a94f4"
   };
 
+  const MAX_PAX = 300;
   const app = initializeApp(firebaseConfig);
   const db = getDatabase(app);
+
+  async function getTotalPax() {
+    try {
+      const snapshot = await get(ref(db, "rsvp"));
+      let total = 0;
+      if (snapshot.exists()) {
+        snapshot.forEach(entry => {
+          const val = entry.val();
+          const k = val.kehadiran;
+          if (k && k !== "Tidak hadir") {
+            const num = k === "5+" ? 5 : parseInt(k);
+            if (!isNaN(num)) total += num;
+          }
+        });
+      }
+      return total;
+    } catch (err) {
+      console.error("getTotalPax error:", err);
+      return 0;
+    }
+  }
+
+  async function updatePaxDisplay() {
+    const total = await getTotalPax();
+    const remaining = MAX_PAX - total;
+    const bar = document.getElementById("pax-bar");
+    const text = document.getElementById("pax-text");
+    const percent = Math.min((total / MAX_PAX) * 100, 100);
+
+    if (remaining <= 0) {
+      text.innerHTML = `😢 Maaf, tempat sudah penuh! (${MAX_PAX}/${MAX_PAX} pax)`;
+      text.style.color = "#c0392b";
+      document.getElementById("rsvpForm").style.display = "none";
+    } else {
+      text.innerHTML = `🎉 <strong>${remaining}</strong> tempat lagi tersedia daripada ${MAX_PAX} pax`;
+      text.style.color = "#996E6D";
+    }
+
+    bar.style.width = percent + "%";
+    bar.style.background = percent >= 90 ? "#c0392b" : percent >= 60 ? "#e67e22" : "#996E6D";
+  }
+
+  updatePaxDisplay();
 
   document.getElementById("rsvpForm").addEventListener("submit", async function (e) {
     e.preventDefault();
@@ -463,6 +517,16 @@ function showSlide(index) {
     successMsg.style.display = "none";
     errorMsg.style.display = "none";
 
+    if (hadir !== "Tidak hadir") {
+      const total = await getTotalPax();
+      const adding = hadir === "5+" ? 5 : parseInt(hadir);
+      if (total + adding > MAX_PAX) {
+        errorMsg.textContent = `❌ Maaf! Hanya ${MAX_PAX - total} tempat lagi tersedia.`;
+        errorMsg.style.display = "block";
+        return;
+      }
+    }
+
     try {
       await push(ref(db, "rsvp"), {
         nama,
@@ -472,8 +536,10 @@ function showSlide(index) {
       });
       successMsg.style.display = "block";
       this.reset();
+      await updatePaxDisplay();
     } catch (err) {
-      console.error(err);
+      console.error("Submit error:", err);
+      errorMsg.textContent = "❌ Ralat semasa menghantar. Cuba lagi ya.";
       errorMsg.style.display = "block";
     }
   });
