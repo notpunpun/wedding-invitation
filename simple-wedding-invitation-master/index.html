@@ -59,7 +59,7 @@
     <!-- Begin Header -->
     <div class="header-wrapper" id="home">
       <!-- Begin Hero -->
-      <section class="hero is-large">
+      <section class="hero is-fullheight">
 
         <!-- Begin Mobile Nav -->
         <nav class="navbar is-transparent is-hidden-desktop" id="mobile-navbar">
@@ -82,11 +82,12 @@
         </nav>
         <!-- End Mobile Nav -->
 
-        <!-- Begin Hero Content -->
+       <!-- Begin Hero Content -->
         <div class="hero-body">
-          <div class="container has-text-centered">
+          <div class="hero-inner">
             <h1 class="subtitle">Undangan Pernikahan</h1>
-            <h2 class="title">Nur Izzati & Danial Solehin</h2>
+            <h2 class="title">Nur Izzati<br>&<br>Danial Solehin</h2>
+
             <h4 class="subtitle tempatwaktu">
               Sabtu, 05 September 2026
               <br>
@@ -94,11 +95,10 @@
               <br>
               Terengganu
             </h4>
-          </div>
 
           <!-- Start Countdown -->
           <div>
-            <ul id="hitungmundur">
+  <ul id="hitungmundur">
               <li><span class="days">00</span><p class="days_text">Hari</p></li>
               <li class="separator">:</li>
               <li><span class="hours">00</span><p class="hours_text">Jam</p></li>
@@ -120,7 +120,32 @@
               });
             </script>
           </div>
+          
           <!-- End Countdown -->
+           <div style="margin-top:16px; display:flex; justify-content:center;">
+  <button id="open-invite" class="btn-cta">
+               Buka Undangan
+             </button>
+            </div>
+          </div><!-- end hero-inner -->
+
+            <script>document.getElementById("open-invite").addEventListener("click", function () {
+
+  // unlock scroll
+  document.body.classList.remove("lock-scroll");
+
+  // play music
+  const song = document.getElementById("song");
+  song.volume = 0.1;
+  song.play().catch(()=>{});
+
+  // auto scroll
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+
+});</script>
 
         </div>
         <!-- End Hero Content -->
@@ -134,7 +159,7 @@
                   <li class="is-active"><a href="#home">Home</a></li>
                   <li><a href="#Waktu">Waktu</a></li>
                   <li><a href="#lokasi">Lokasi</a></li>
-                  <li><a href="#tentang-pasangan">Tentang CPW & CPP</a></li>
+                  <li><a href="#tentang-pasangan">About Us</a></li>
                   <li><a href="#rsvp">RSVP</a></li>
                 </ul>
               </div>
@@ -243,38 +268,78 @@
         <div class="container">
           <div class="columns is-multiline">
             <div class="column has-text-centered is-12 prolog">
-              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Tentang Nur Izzati dan Danial Solehin</h1>
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">About Us</h1>
 
-              <!-- IMAGES -->
-              <div class="tile">
-                <div class="tile is-ancestor">
-                  <div class="tile is-parent">
-                    <article class="tile is-child foto1 notification" data-aos="fade-up" data-aos-easing="linear">
-                      <div class="content">
-                        <p class="title-foto">Foto 1</p>
-                        <p class="subtitle-foto">lorem <a href="https://google.com" target="_blank">ipsum</a></p>
-                      </div>
-                    </article>
+              <!-- SLIDESHOW -->
+              <div class="slideshow-wrapper" data-aos="fade-up" data-aos-easing="linear">
+                <div class="slideshow-container">
+
+                  <div class="slide active foto1">
+                    <div class="slide-content">
+                      <p class="title-foto">Foto 1</p>
+                      <p class="subtitle-foto">black</p>
+                    </div>
                   </div>
-                  <div class="tile is-parent">
-                    <article class="tile is-child notification foto2" data-aos="fade-up" data-aos-easing="linear">
-                      <div class="content">
-                        <p class="title-foto">Foto 2</p>
-                        <p class="subtitle-foto">cudding.</p>
-                      </div>
-                    </article>
+
+                  <div class="slide foto2">
+                    <div class="slide-content">
+                      <p class="title-foto">Foto 2</p>
+                      <p class="subtitle-foto">cudding.</p>
+                    </div>
                   </div>
-                  <div class="tile is-parent">
-                    <article class="tile is-child notification foto3" data-aos="fade-up" data-aos-easing="linear">
-                      <div class="content">
-                        <p class="title-foto">Foto 3</p>
-                        <p class="subtitle-foto">Cerita meow dimulai</p>
+
+                  <div class="slide slide-video">
+                    <video class="slide-vid1" autoplay loop muted playsinline>
+                       <source src="video/vid2.mp4" type="video/mp4" />
+                       </video>
+                      <div class="slide-content">
+                      <p class="title-foto">Video</p>
+                      <p class="subtitle-foto">Bih</p>
                       </div>
-                    </article>
                   </div>
+
+                  <div class="slide slide-video">
+                    <video class="slide-vid2" autoplay loop muted playsinline>
+                       <source src="video/vid3.mp4" type="video/mp4" />
+                       </video>
+                      <div class="slide-content">
+                      <p class="title-foto">Video</p>
+                      <p class="subtitle-foto">Bih</p>
+                      </div>
+                  </div>
+<script>
+function showSlide(index) {
+  slides.forEach(s => {
+    s.classList.remove('active');
+    const vid = s.querySelector('video');
+    if (vid) { vid.pause(); vid.currentTime = 0; }
+  });
+  dots.forEach(d => d.classList.remove('active'));
+  currentSlide = (index + slides.length) % slides.length;
+  slides[currentSlide].classList.add('active');
+  dots[currentSlide].classList.add('active');
+
+  const activeVid = slides[currentSlide].querySelector('video');
+  if (activeVid) {
+    activeVid.muted = true;
+    activeVid.play();
+  }
+}
+</script>
+                  <!-- Prev / Next Buttons -->
+                  <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                  <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
+                </div>
+
+                <!-- Dots -->
+                <div class="slide-dots">
+                  <span class="dot active" onclick="goToSlide(0)"></span>
+                  <span class="dot" onclick="goToSlide(1)"></span>
+                  <span class="dot" onclick="goToSlide(2)"></span>
+                  <span class="dot" onclick="goToSlide(3)"></span>
                 </div>
               </div>
-              <!-- END IMAGES -->
+              <!-- END SLIDESHOW -->
 
               <div class="space40px"></div>
               <div data-aos="fade-up" data-aos-easing="linear">
@@ -351,7 +416,7 @@
     <!-- Audio Section -->
     <div id="audio-container">
       <audio id="song" autoplay loop>
-        <source src="audio/kali.mp3" type="audio/mp3" />
+        <source src="audio/noh.mp3" type="audio/mp3" />
       </audio>
       <div class="audio-icon-wrapper">
         <i class="bi bi-disc"></i>
@@ -402,7 +467,8 @@
           audioIcon.classList.add("bi-pause-circle");
         });
 
-        audioIconWrapper.addEventListener("click", function () {
+        audioIconWrapper.addEventListener("click", function (e) {
+          e.stopPropagation();
           if (isPlaying) {
             song.pause();
             audioIcon.classList.remove("bi-disc");
@@ -422,7 +488,6 @@
       function launchConfetti() {
         var duration = 4000;
         var end = Date.now() + duration;
-
         (function frame() {
           confetti({
             particleCount: 4,
@@ -431,21 +496,59 @@
             origin: { x: Math.random(), y: 0.4 },
             colors: ['#BC8887', '#996E6D', '#EDD2D1', '#F4E2E2', '#D8A9A8', '#ffffff']
           });
-
-          if (Date.now() < end) {
-            requestAnimationFrame(frame);
-          }
+          if (Date.now() < end) requestAnimationFrame(frame);
         }());
       }
 
-      window.addEventListener('load', function () {
-        launchConfetti();
-      });
-
-      document.addEventListener('click', function () {
+      window.addEventListener('load', function () { launchConfetti(); });
+      document.addEventListener('click', function (e) {
+        if (e.target.closest('.audio-icon-wrapper')) return;
         launchConfetti();
       });
     </script>
+
+    <!-- Slideshow Script -->
+    <!-- Slideshow Script -->
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach(s => {
+      s.classList.remove('active');
+      const vid = s.querySelector('video');
+      if (vid) { vid.pause(); vid.currentTime = 0; }
+    });
+    dots.forEach(d => d.classList.remove('active'));
+    currentSlide = (index + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+
+    const activeVid = slides[currentSlide].querySelector('video');
+    if (activeVid) {
+      activeVid.muted = true;
+      activeVid.play();
+    }
+  }
+
+  function changeSlide(direction) {
+    showSlide(currentSlide + direction);
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
+  }
+
+  // Auto advance every x seconds
+  setInterval(() => changeSlide(1), 6000);
+</script>
+
+<script>
+  document.body.classList.add("lock-scroll");
+</script>
+
+  </body>
 
   </body>
 </html>

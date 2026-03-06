@@ -56,6 +56,8 @@ html {
   font-size: 5rem;
   padding-bottom: 5px;
   color: whitesmoke;
+  text-align: center !important;
+  width: 100%;
 }
 
 .hero .subtitle {
@@ -565,7 +567,7 @@ body.preloader-site {
 
 
 .foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/beatriz-perez-moya-M2T1j-6Fn8w-unsplash.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/pic1.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -574,7 +576,7 @@ body.preloader-site {
 
 
 .foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/evelina-friman-hw_sKmjb0ns-unsplash.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/pic2.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -582,7 +584,7 @@ body.preloader-site {
 }
 
 .foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/jeremy-wong-weddings-464ps_nOflw-unsplash.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/pic2.jpeg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -679,3 +681,265 @@ body.preloader-site {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
+/*body, html {
+  background-color: white;
+  height: 100%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
+#emitter {
+  visibility: hidden;
+  background-color: #222;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 40%;
+  left: 0%;
+}*/
+#welcome-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0.5rem;
+  color: whitesmoke;
+}
+
+.welcome-name {
+  font-family: 'Rouge Script', sans-serif;
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+#open-btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-family: 'Raleway', sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#open-btn:hover {
+  background: white;
+  color: #996E6D;
+}
+/* Slideshow */
+.slideshow-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 24rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.3);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.slide-btn:hover { background: rgba(255,255,255,0.6); }
+.slide-btn.prev { left: 10px; }
+.slide-btn.next { right: 10px; }
+
+.slide-dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #D8A9A8;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active { background: #996E6D; }
+.slide-video {
+  background: #000;
+}
+
+.slide-vid1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.slide-vid2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.slide-video .slide-content {
+  position: relative;
+  z-index: 1;
+}
+
+.slideshow-container .slide.foto1,
+.slideshow-container .slide.foto2,
+.slideshow-container .slide.foto3 {
+  min-height: unset;
+  height: 100%;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+.btn-cta{
+  background:#BC8887;
+  color:white;
+  border:none;
+  padding:14px 28px;
+  font-size:16px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn-cta:hover{
+  transform:scale(1.05);
+  
+}
+/* Hero inner wrapper */
+.hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero-inner > div:has(#hitungmundur) {
+    margin-top: 50px; /* adjust this value — more negative = closer */
+  }
+
+/* ── Mobile Hero Fix ── */
+@media (max-width: 768px) {
+
+  .hero .hero-body {
+    padding: 2rem 1rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero .title {
+    font-size: 2.6rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0 !important;
+  }
+
+ .hero .subtitle {
+    padding: 4px !important;
+    font-size: 0.9rem !important;
+    margin-bottom: 0 !important;
+    margin-top: 1rem !important;
+  }
+
+  .hero .tempatwaktu {
+    font-size: 0.85rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  #hitungmundur {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 4px;
+    list-style: none;
+  }
+
+  #hitungmundur li span {
+    font-size: 1.5rem !important;
+  }
+
+  #hitungmundur li p {
+    font-size: 0.6rem !important;
+  }
+
+#open-invite {
+    width: 200px !important;
+    height: 48px !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+  }
+}
+.hero .title {
+    transform: none !important;
+  }
